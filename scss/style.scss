@@ -42,11 +42,11 @@ body {
       display: grid;
       grid-template-columns: 1fr;
       align-items: center;
+      justify-items: center;
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
       @include xs {
         grid-template-columns: 1fr 1fr;
-        justify-items: center;
       }
 
       @include md {
