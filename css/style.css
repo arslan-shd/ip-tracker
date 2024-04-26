@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  height: 100dvh;
+  font-family: "Rubik", sans-serif; }
+
+#map {
+  height: 100%;
+  z-index: -1; }
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100%; }
+  .app .app-header {
+    position: relative; }
+    .app .app-header .result-container {
+      width: 500px;
+      background: #fff;
+      border-radius: 15px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 70%;
+      transform: translate(-50%, -50%);
+      padding: 15px 8px;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; }
+      @media (min-width: 380px) {
+        .app .app-header .result-container {
+          grid-template-columns: 1fr 1fr; } }
+      @media (min-width: 768px) {
+        .app .app-header .result-container {
+          grid-template-columns: repeat(4, 1fr);
+          padding: 30px 15px; } }
+      .app .app-header .result-container .stats {
+        padding: 0 15px; }
+        @media (min-width: 1024px) {
+          .app .app-header .result-container .stats {
+            padding: 0 20px; } }
+        .app .app-header .result-container .stats > span {
+          display: inline-block;
+          margin-bottom: 10px;
+          color: #2b2b2b;
+          font-size: 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 1.25px; }
+          @media (min-width: 1024px) {
+            .app .app-header .result-container .stats > span {
+              font-size: 0.75rem; } }
+        .app .app-header .result-container .stats > p {
+          font-size: 1rem;
+          font-weight: 500; }
+          @media (min-width: 1024px) {
+            .app .app-header .result-container .stats > p {
+              font-size: 1.25rem; } }
+    .app .app-header .app-header-img-mobile {
+      height: 375px;
+      max-width: 100%; }
+      @media (min-width: 768px) {
+        .app .app-header .app-header-img-mobile {
+          display: none; } }
+    .app .app-header .app-header-img-desktop {
+      display: none;
+      width: 100%; }
+      @media (min-width: 768px) {
+        .app .app-header .app-header-img-desktop {
+          display: inline-block; } }
+    .app .app-header .app-main {
+      position: absolute;
+      top: 37%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .app .app-header .app-title {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 1rem; }
+      @media (min-width: 640px) {
+        .app .app-header .app-title {
+          font-size: 1.25rem; } }
+    .app .app-header .search-container {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden; }
+      .app .app-header .search-container .searchbar {
+        border: none;
+        outline: none;
+        width: 250px;
+        padding: 0.75rem 1rem; }
+        @media (min-width: 1024px) {
+          .app .app-header .search-container .searchbar {
+            width: 350px; } }
+        .app .app-header .search-container .searchbar::placeholder {
+          color: #969696;
+          font-size: 0.75rem; }
+          @media (min-width: 768px) {
+            .app .app-header .search-container .searchbar::placeholder {
+              font-size: 1rem; } }
+      .app .app-header .search-container .search-btn {
+        background: #2b2b2b;
+        outline: none;
+        display: flex;
+        padding: 0.75rem 1rem; }
