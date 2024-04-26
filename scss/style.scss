@@ -48,6 +48,7 @@ body {
 
       @include xs {
         grid-template-columns: 1fr 1fr;
+        transform: translate(-50%, -50%);
       }
 
       @include md {
@@ -111,7 +112,7 @@ body {
       position: absolute;
       top: 37%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -85%);
     }
 
     .app-title {

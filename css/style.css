@@ -37,7 +37,8 @@ body {
       gap: 5px; }
       @media (min-width: 380px) {
         .app .app-header .result-container {
-          grid-template-columns: 1fr 1fr; } }
+          grid-template-columns: 1fr 1fr;
+          transform: translate(-50%, -50%); } }
       @media (min-width: 768px) {
         .app .app-header .result-container {
           grid-template-columns: repeat(4, 1fr);
@@ -80,7 +81,7 @@ body {
       position: absolute;
       top: 37%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -85%); }
     .app .app-header .app-title {
       font-size: 1.5rem;
       font-weight: 400;
