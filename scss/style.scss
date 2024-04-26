@@ -44,6 +44,7 @@ body {
       align-items: center;
       justify-items: center;
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      gap: 5px;
 
       @include xs {
         grid-template-columns: 1fr 1fr;
@@ -61,12 +62,13 @@ body {
           padding: 0 20px;
         }
         & > span {
-          display: inline-block;
+          display: block;
           margin-bottom: 10px;
           color: $very-dark-gray;
           font-size: 0.5rem;
           text-transform: uppercase;
           letter-spacing: 1.25px;
+          text-align: center;
 
           @include lg {
             font-size: 0.75rem;
