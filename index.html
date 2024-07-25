@@ -51,7 +51,18 @@
             <p>SpaceX Starlink</p>
           </div>
         </div>
-        <img
+        <picture>
+          <source
+            media="(min-width: 460px)"
+            srcset="./images/pattern-bg-desktop.png"
+          />
+          <img
+            style="height: 375px"
+            src="./images/pattern-bg-mobile-j.png"
+            alt=""
+          />
+        </picture>
+        <!-- <img
           class="app-header-img-desktop"
           src="./images/pattern-bg-desktop.png"
           alt=""
@@ -60,7 +71,7 @@
           class="app-header-img-mobile"
           src="./images/pattern-bg-mobile.jpg"
           alt=""
-        />
+        /> -->
         <div class="app-main">
           <h1 class="app-title">IP Address Tracker</h1>
           <div class="search-container">
@@ -89,5 +100,6 @@
       crossorigin=""
     ></script>
     <script src="./script/map.js"></script>
+    <script src="./api.js"></script>
   </body>
 </html>

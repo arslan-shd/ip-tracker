@@ -86,10 +86,13 @@ body {
       }
     }
 
-    // img {
-    //   max-width: 100%;
-    //   height: 100%;
-    // }
+    picture {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
 
     .app-header-img-mobile {
       height: 375px;

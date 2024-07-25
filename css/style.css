@@ -65,6 +65,10 @@ body {
           @media (min-width: 1024px) {
             .app .app-header .result-container .stats > p {
               font-size: 1.25rem; } }
+    .app .app-header picture {
+      display: block; }
+    .app .app-header img {
+      width: 100%; }
     .app .app-header .app-header-img-mobile {
       height: 375px;
       max-width: 100%; }
