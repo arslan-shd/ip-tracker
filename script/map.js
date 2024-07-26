@@ -64,6 +64,9 @@ function getLocation() {
 
     const marker = L.marker([coords.latitude, coords.longitude]);
     marker.addTo(map);
+
+    const popuUp = marker.bindPopup(`<h2>Your IP Location</h2>`);
+    popuUp.addTo(map);
   });
 }
 
