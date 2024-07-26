@@ -37,19 +37,46 @@
 
 // marker.addTo(map);
 
-const map = L.map("map").setView([28.628151, 77.367783], 13);
-const attribution = "&copy; OpenStreetMap contributors coded by Arslan";
-const tiles = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution,
-});
-tiles.addTo(map);
+let getLocationPromise = () => {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => resolve(position)
+      //   (error) => reject(error)
+    );
+  });
+};
 
-// const circleLayer = L.circle([28.628151, 77.367783], {
-//   radius: 200,
-//   color: "yellow",
-//   stroke: false,
+function getLocation() {
+  getLocationPromise().then((res) => {
+    // If promise get resolved
+    const { coords } = res;
+    console.log(coords.latitude, coords.longitude);
+
+    const map = L.map("map").setView([coords.latitude, coords.longitude], 13);
+    const attribution = "&copy; OpenStreetMap contributors coded by Arslan";
+    const tiles = L.tileLayer(
+      "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      {
+        attribution,
+      }
+    );
+    tiles.addTo(map);
+
+    const marker = L.marker([coords.latitude, coords.longitude]);
+    marker.addTo(map);
+  });
+}
+
+getLocation();
+
+// const map = L.map("map").setView([28.6025505, 77.3767544], 13);
+// const attribution = "&copy; OpenStreetMap contributors coded by Arslan";
+// const tiles = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+//   attribution,
 // });
-// circleLayer.addTo(map);
+// tiles.addTo(map);
 
-const marker = L.marker([28.628151, 77.367783], { color: "red" });
-marker.addTo(map);
+// const marker = L.marker([28.6025505, 77.3767544]);
+// marker.addTo(map);
+
+// console.log(latLong());
