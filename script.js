@@ -25,6 +25,7 @@ ipSearchInput.addEventListener("keypress", function (event) {
 
 const searchAction = async () => {
   const ipInput = ipSearchInput.value;
+  ipSearchInput.value = "";
   if (ipInput) {
     console.log(ipInput);
     const res = await fetch(
