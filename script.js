@@ -2,7 +2,6 @@ import { fetchMultipleAPI } from "./api.js";
 import { map } from "./script/map.js";
 
 let locationObj = await fetchMultipleAPI();
-console.log(locationObj);
 
 const ipSearchInput = document.getElementById("ip-search");
 const searchBtn = document.getElementById("search-btn");
@@ -50,25 +49,10 @@ const searchAction = async () => {
     alert("Please enter IP Address");
   }
 
-  // render map
-
-  console.log(
-    locationObj.latitude,
-    locationObj.longitude,
-    "from api after search"
-  );
-
-  console.log(map);
-  if (map) {
-    map.remove();
-  }
-
   renderMap(map);
 };
 
 const renderMap = (map) => {
-  map = new L.map("map");
-
   map.setView([locationObj.latitude, locationObj.longitude], 13);
   const attribution = "&copy; OpenStreetMap contributors coded by Arslan";
   const tiles = L.tileLayer(

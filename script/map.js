@@ -20,7 +20,7 @@ function getLocation() {
       renderMap(coords);
     })
     .catch((err) => {
-      alert(err.message);
+      alert("Turn on Your device location and reload the web page.");
     });
 }
 
