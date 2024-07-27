@@ -36,19 +36,19 @@
         <div class="result-container">
           <div class="stats">
             <span>IP Address</span>
-            <p id="ip">103.226.202.243</p>
+            <p id="ip">Loading...</p>
           </div>
           <div class="stats">
-            <span>location</span>
-            <p id="location">Brooklyn NY, 1001</p>
+            <span>City</span>
+            <p id="location">Loading...</p>
           </div>
           <div class="stats">
             <span>timezone</span>
-            <p id="timezone">UTC-5:00</p>
+            <p id="timezone">Loading...</p>
           </div>
           <div class="stats">
             <span>ISP</span>
-            <p id="isp">SpaceX Starlink</p>
+            <p id="isp">Loading...</p>
           </div>
         </div>
         <picture>
@@ -76,11 +76,12 @@
           <h1 class="app-title">IP Address Tracker</h1>
           <div class="search-container">
             <input
+              id="ip-search"
               class="searchbar"
               type="text"
               placeholder="Search for any IP address or domain"
             />
-            <div class="search-btn">
+            <div id="search-btn" class="search-btn">
               <img src="./images//icon-arrow.svg" alt="" />
             </div>
           </div>
